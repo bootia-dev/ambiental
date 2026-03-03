@@ -113,8 +113,8 @@ export default function ResiduosPlayasChart({ data }: ResiduosPlayasChartProps) 
               color: isDark ? "#e2e8f0" : "#0f172a",
               marginBottom: 4,
             }}
-            formatter={(value: number) => [
-              `${value.toLocaleString("es-UY")} kg`,
+            formatter={(value) => [
+              value != null ? `${Number(value).toLocaleString("es-UY")} kg` : "",
               "Residuos",
             ]}
           />
